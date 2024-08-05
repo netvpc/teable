@@ -35,6 +35,7 @@ jobs:
               echo "Updating to latest version..."
               git tag ${RELEASE_VER}
               git push origin ${RELEASE_VER}
+              gh workflow run docker-publish.yml --ref ${RELEASE_VER}
           else
               echo "No updates available..."
           fi
