@@ -43,7 +43,7 @@ services:
       - teable-network
 
   teable-cache:
-    image: redis:7-bookworm
+    image: redis:8-bookworm
     container_name: teable-cache
     restart: always
     volumes:
